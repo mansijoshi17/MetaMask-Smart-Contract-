@@ -83,7 +83,7 @@ function Bank() {
     const Deposit = () => {
         Web3.eth.getAccounts().then(function(accounts){
             var acc = accounts[0];
-            return contractor.methods.deposit(Ammount).send({from: acc});
+            return contractor.methods.deposit(Ammount).send({from: acc});//deposit method.
         }).then(function(tx) {
             console.log(tx);
         }).catch(function(tx){
